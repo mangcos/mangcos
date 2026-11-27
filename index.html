@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Perfil de Mac Mac Mac, estudiante de ASIR en Sevilla.">
+  <title>Mac Mac Mac · Estudiante de ASIR</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --page: #0b1020;
+      --surface: #121a2d;
+      --surface-raised: #18243b;
+      --text: #edf3ff;
+      --muted: #a7b5ca;
+      --teal: #62e2d3;
+      --blue: #91a8ff;
+      --line: rgb(166 190 227 / 15%);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 12% 0%, rgb(39 86 119 / 22%), transparent 32rem),
+        radial-gradient(ellipse at 93% 20%, rgb(82 76 145 / 16%), transparent 30rem),
+        var(--page);
+      color: var(--text);
+      font: 16px/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: var(--teal);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: 4px;
+    }
+
+    .wrap {
+      width: min(100% - 40px, 1040px);
+      margin-inline: auto;
+    }
+
+    .topbar {
+      display: flex;
+      min-height: 76px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      color: var(--text);
+      font-weight: 750;
+      letter-spacing: .02em;
+      text-decoration: none;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-size: .9rem;
+      text-decoration: none;
+      transition: color .18s ease;
+    }
+
+    .nav a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding-block: clamp(42px, 8vw, 82px) 48px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 18px;
+      color: var(--teal);
+      font-size: .8rem;
+      font-weight: 750;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+      box-shadow: 0 0 14px var(--teal);
+      content: "";
+    }
+
+    h1,
+    h2,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 14px;
+      font-size: clamp(2.6rem, 8vw, 5rem);
+      letter-spacing: -.065em;
+      line-height: 1.05;
+    }
+
+    h1 span {
+      color: var(--teal);
+    }
+
+    .intro {
+      max-width: 640px;
+      margin-bottom: 26px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      padding: 6px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgb(255 255 255 / 3%);
+      color: #d3def0;
+      font-size: .86rem;
+    }
+
+    .banner {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--surface);
+      box-shadow: 0 22px 65px rgb(0 0 0 / 24%);
+    }
+
+    .banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    main {
+      padding-block: 54px 76px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      letter-spacing: -.035em;
+    }
+
+    .section-note {
+      margin-bottom: 2px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: linear-gradient(145deg, rgb(255 255 255 / 4%), transparent 70%), var(--surface);
+    }
+
+    .card-label {
+      margin-bottom: 12px;
+      color: var(--teal);
+      font-size: .76rem;
+      font-weight: 750;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .interests {
+      margin-top: 16px;
+    }
+
+    .interest-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(240px, .85fr);
+      align-items: center;
+      gap: 24px;
+      overflow: hidden;
+    }
+
+    .interest-card .chips {
+      margin-top: 18px;
+    }
+
+    .interest-card img {
+      display: block;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .closing {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 16px;
+      padding: 20px 24px;
+      border: 1px solid rgb(98 226 211 / 22%);
+      border-radius: 16px;
+      background: linear-gradient(100deg, rgb(98 226 211 / 9%), rgb(145 168 255 / 7%));
+    }
+
+    .closing p {
+      margin: 0;
+    }
+
+    .closing strong {
+      color: var(--teal);
+    }
+
+    footer {
+      padding-block: 20px 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    @media (max-width: 680px) {
+      .wrap {
+        width: min(100% - 28px, 1040px);
+      }
+
+      .topbar {
+        min-height: 68px;
+      }
+
+      .nav {
+        gap: 12px;
+      }
+
+      .nav a {
+        font-size: .82rem;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      .cards,
+      .interest-card {
+        grid-template-columns: 1fr;
+      }
+
+      .interest-card img {
+        max-width: 520px;
+        margin-inline: auto;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand {
+        font-size: .88rem;
+      }
+
+      .nav {
+        gap: 9px;
+      }
+
+      .nav a {
+        font-size: .75rem;
+      }
+
+      .closing {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#" aria-label="Mac Mac Mac, inicio">MAC MAC MAC</a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#formacion">Formación</a>
+      <a href="#intereses">Intereses</a>
+    </nav>
+  </header>
+
+  <section class="wrap hero" aria-labelledby="main-title">
+    <p class="eyebrow">Estudiante de ASIR · Sevilla</p>
+    <h1 id="main-title">¡Buenas! Soy <span>Mac Mac Mac.</span></h1>
+    <p class="intro">Me gusta la informática y descubrir qué pasa detrás de la pantalla. Ahora estoy aprendiendo sobre sistemas y redes.</p>
+    <div class="chips" aria-label="Áreas de interés">
+      <span class="chip">Sistemas</span>
+      <span class="chip">Redes</span>
+      <span class="chip">Servidores</span>
+      <span class="chip">Bases de datos</span>
+    </div>
+  </section>
+
+  <div class="wrap banner">
+    <img src="img/network-loop.gif" alt="Animación de una red informática con paquetes de datos en movimiento" width="900" height="260">
+  </div>
+
+  <main class="wrap">
+    <section id="sobre-mi" aria-labelledby="about-title">
+      <div class="section-heading">
+        <h2 id="about-title">Mi camino en informática</h2>
+        <p class="section-note">Aprendiendo paso a paso, con curiosidad.</p>
+      </div>
+
+      <div class="cards" id="formacion">
+        <article class="card">
+          <p class="card-label">Ahora</p>
+          <h3>Administración de Sistemas Informáticos en Red</h3>
+          <p>Estoy cursando 1.º de ASIR en el IES Rodrigo Caro, en Coria del Río.</p>
+        </article>
+        <article class="card">
+          <p class="card-label">Formación completada</p>
+          <h3>Sistemas Microinformáticos y Redes</h3>
+          <p>Finalicé SMR en 2026 en el IES Rodrigo Caro, con una nota media de 8,5.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card interest-card interests" id="intereses" aria-labelledby="interest-title">
+      <div>
+        <p class="card-label">Cuando no estoy estudiando</p>
+        <h2 id="interest-title">Tecnología y anime 🍜</h2>
+        <p class="section-note">Me interesan las nuevas tecnologías y todo lo relacionado con redes, sistemas y bases de datos. Y también me gusta disfrutar de una buena serie de anime.</p>
+        <div class="chips" aria-label="Aficiones">
+          <span class="chip">Nuevas tecnologías</span>
+          <span class="chip">Anime</span>
+          <span class="chip">Sevilla, Andalucía</span>
+        </div>
+      </div>
+      <img src="img/asir-tech.svg" alt="Ilustración de una red que conecta un ordenador, un servidor y una base de datos" width="1000" height="360" loading="lazy">
+    </section>
+
+    <aside class="closing">
+      <p><strong>Mi objetivo:</strong> seguir aprendiendo y conectar ideas.</p>
+      <p>¡Gracias por pasarte! ✨</p>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="wrap">Mac Mac Mac · Sevilla, Andalucía</div>
+  </footer>
+</body>
+</html>
