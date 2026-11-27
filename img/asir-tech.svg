@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img" aria-labelledby="title description">
+  <title id="title">Tecnología y sistemas ASIR</title>
+  <desc id="description">Ilustración de una red conectando un servidor, un ordenador y una base de datos.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101b35"/>
+      <stop offset="1" stop-color="#172b4d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#48d6d2"/>
+      <stop offset="1" stop-color="#6c8cff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="360" rx="26" fill="url(#background)"/>
+  <path d="M0 285C180 230 280 340 470 280s330-95 530-15v95H0Z" fill="#20375d" opacity=".48"/>
+  <g fill="none" stroke="#41618b" stroke-width="1" opacity=".35">
+    <path d="M0 70h1000M0 120h1000M0 170h1000M0 220h1000M0 270h1000"/>
+    <path d="M100 0v360M200 0v360M300 0v360M400 0v360M500 0v360M600 0v360M700 0v360M800 0v360M900 0v360"/>
+  </g>
+
+  <text x="54" y="82" fill="#f3f7ff" font-family="Arial, sans-serif" font-size="31" font-weight="700">Sistemas conectados</text>
+  <text x="56" y="113" fill="#a9bddb" font-family="Arial, sans-serif" font-size="16">Redes · Servidores · Bases de datos</text>
+
+  <g fill="none" stroke="url(#accent)" stroke-width="3">
+    <path d="M263 204H410M478 204H581M650 204H762"/>
+    <path d="M444 159V133H614V159"/>
+  </g>
+  <g fill="#55d5d4" filter="url(#glow)">
+    <circle cx="337" cy="204" r="5"/>
+    <circle cx="530" cy="204" r="5"/>
+    <circle cx="705" cy="204" r="5"/>
+    <circle cx="530" cy="133" r="5"/>
+  </g>
+
+  <g transform="translate(165 158)">
+    <rect width="98" height="92" rx="13" fill="#213b61" stroke="#5680ae" stroke-width="2"/>
+    <rect x="14" y="15" width="70" height="46" rx="6" fill="#10223d"/>
+    <path d="M24 39h13l7-12 10 23 8-12h11" fill="none" stroke="#55d5d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M37 73h24M49 61v12" stroke="#83a6ce" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="214" y="274" text-anchor="middle" fill="#dbe8fa" font-family="Arial, sans-serif" font-size="14">RED</text>
+
+  <g transform="translate(410 158)">
+    <rect width="68" height="92" rx="10" fill="#213b61" stroke="#5680ae" stroke-width="2"/>
+    <rect x="10" y="12" width="48" height="19" rx="4" fill="#10223d"/>
+    <rect x="10" y="37" width="48" height="19" rx="4" fill="#10223d"/>
+    <rect x="10" y="62" width="48" height="19" rx="4" fill="#10223d"/>
+    <g fill="#55d5d4">
+      <circle cx="18" cy="21" r="3"/><circle cx="18" cy="46" r="3"/><circle cx="18" cy="71" r="3"/>
+    </g>
+    <g fill="#8ca9ce">
+      <circle cx="50" cy="21" r="2"/><circle cx="50" cy="46" r="2"/><circle cx="50" cy="71" r="2"/>
+    </g>
+  </g>
+  <text x="444" y="274" text-anchor="middle" fill="#dbe8fa" font-family="Arial, sans-serif" font-size="14">SERVIDOR</text>
+
+  <g transform="translate(581 158)">
+    <ellipse cx="35" cy="14" rx="34" ry="13" fill="#34527b" stroke="#6b91bf" stroke-width="2"/>
+    <path d="M1 14v56c0 8 15 14 34 14s34-6 34-14V14M1 42c0 8 15 14 34 14s34-6 34-14" fill="#213b61" stroke="#6b91bf" stroke-width="2"/>
+    <path d="M1 14c0 8 15 14 34 14s34-6 34-14" fill="none" stroke="#6b91bf" stroke-width="2"/>
+    <ellipse cx="35" cy="14" rx="8" ry="3" fill="#55d5d4" opacity=".9"/>
+  </g>
+  <text x="616" y="274" text-anchor="middle" fill="#dbe8fa" font-family="Arial, sans-serif" font-size="14">BASE DE DATOS</text>
+
+  <g transform="translate(762 158)">
+    <rect width="96" height="92" rx="13" fill="#213b61" stroke="#5680ae" stroke-width="2"/>
+    <rect x="12" y="13" width="72" height="50" rx="6" fill="#10223d"/>
+    <path d="M22 51V36l12-9 12 9 12-15 13 8" fill="none" stroke="#8c9aff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M32 77h32M48 63v14" stroke="#83a6ce" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="810" y="274" text-anchor="middle" fill="#dbe8fa" font-family="Arial, sans-serif" font-size="14">SISTEMAS</text>
+
+  <g transform="translate(54 304)">
+    <circle cx="6" cy="6" r="5" fill="#55d5d4"/>
+    <text x="20" y="11" fill="#9fb4d2" font-family="Arial, sans-serif" font-size="13">Aprendiendo y conectando ideas</text>
+  </g>
+</svg>
